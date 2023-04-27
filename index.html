@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-12">
+                <div class="card ">
+                    <div class="card-header text-center ">
+                        Bài tập 1: Tính điểm tuyển sinh
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="card-body col-sm-6">
+                            <label class="pt-3" for="">Điểm môn thứ nhất</label>
+                            <input id="diem1" class="form-control " type="text">
+                            <label class="pt-3" for="">Điểm môn thứ hai</label>
+                            <input id="diem2" class="form-control " type="text">
+                            <label class="pt-3" for="">Điểm môn thứ ba</label>
+                            <input id="diem3" class="form-control " type="text">
+                        </div>
+                        <div class="card-body col-sm-6">
+                            <p>Chọn Khu Vực</p>
+                            <select name="" id="khuVuc" class="form-control">
+                                <option value="2">Khu Vực A</option>
+                                <option value="1">Khu Vực B</option>
+                                <option value="0.5">Khu Vực C</option>
+                                <option value="0">0</option>
+                            </select>
+                            <br>
+                            <br>
+                            <p>Chọn Đối Tượng</p>
+                            <select name="" id="doiTuong" class="form-control">
+                                <option value="2.5">1</option>
+                                <option value="1.5">2</option>
+                                <option value="1">3</option>
+                                <option value="0">0</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="tinhDiem" class="btn btn-secondary">Tính Điểm</button>
+                    <br>
+                    <br>
+                    <div id="ketQua1" class="card-footer pt-3">
+                        Kết Quả:
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <!-- BT2 -->
+                <div class="card ">
+                    <div class="card-header text-center ">
+                        Bài tập 2: Tính tiền điện
+                    </div>
+                    <div class="">
+                        <div class="card-body col-sm-6">
+                            <label class="pt-3" for="">Ông/Bà </label>
+                            <input id="hoVaTen" class="form-control " type="text">
+                            <label class="pt-3" for="">Tổng Kw đã sử dụng</label>
+                            <input id="kWDaSuDung" class="form-control " type="text">
+                        </div>
+                        <button id="tinhTienDien" class=" ml-3 mb-3 btn btn-secondary">Tính Tiền Điện</button>
+                    </div>
+                    <div id="ketQua2" class="card-footer pt-3">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card ">
+                    <div class="card-header text-center ">
+                        Bài tập 3: Tính thuế thu nhập cá nhân
+                    </div>
+                    <div class="">
+                        <div class="card-body col-sm-12">
+                            <label class="pt-3" for="">Họ và Tên </label>
+                            <input id="hoVaTen2" class="form-control " type="text">
+                            <label class="pt-3" for="">Tổng thu nhập năm (triệu)</label>
+                            <input id="tongThuNhap" class="form-control " type="text">
+                            <label class="pt-3" for="">Số người phụ thuộc</label>
+                            <input id="nguoiPhuThuoc" class="form-control " type="number">
+                        </div>
+                        <button id="kiemTra" class="form-control mb-3 btn btn-success">Kiểm Tra</button>
+                    </div>
+                    <div id="ketQua3" class="card-footer pt-3">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card ">
+                    <div class="card-header text-center ">
+                        Bài tập 4: Tính tiền cáp
+                    </div>
+                    <div class="">
+                        <div class="card-body col-sm-12">
+                            <h5 class="pt-3" for="">Mã khách hàng</h5>
+                            <input id="maKhachHang" class="form-control " type="text">
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h5 for="">Loại khách hàng: </h5>
+                                </div>
+                                <div class="col-sm-4">
+                                    <span>
+                                        <input onclick="offSoKetNoi()" type="radio" name="selector" id="nhaDan">
+                                        <label for="nhaDan">Nhà dân</label>
+                                    </span>
+                                </div>
+                                <div class="col-sm-4">
+                                    <span>
+                                        <input onclick="onSoKetNoi()" type="radio" name="selector"
+                                            id="doanhNghiep">
+                                        <label for="doanhNghiep">Doanh Nghiệp</label>
+                                    </span>
+                                    <div id="soKetNoi" class="forrm -group" style="display: none;">
+                                        <h5>Nhập số kết nối</h5>
+                                        <input id="nhapSoKetNoi" type="text">
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                            <br>
+                            <h5 class="pt-3" for="">Số kênh cao cấp</h5>
+                            <input id="soKenhCaoCap" class="form-control " type="number">
+                        </div>
+                        <button id="ketNoi" class="form-control mb-3 btn btn-success">Kết Nối</button>
+                    </div>
+                    <div id="ketQua4" class="card-footer pt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./style.js"></script>
+</body>
+
+</html>
